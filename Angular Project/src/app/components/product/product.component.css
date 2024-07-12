@@ -1,0 +1,9 @@
+.product-card {
+  width: 18rem;
+  height: 25rem;
+}
+
+.product-image-placeholder {
+  height: 200px;
+  background-color: #cfdbe8; /* Bootstrap primary color */
+}

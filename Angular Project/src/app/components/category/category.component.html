@@ -1,0 +1,23 @@
+<ul class="list-group">
+  <li
+    [class]="getAllCategoryClass()"
+    (click)="setAllCategory()"
+    routerLink="/products"
+  >
+    Tüm Ürünler
+  </li>
+  <li
+    (click)="setCurrentCategory(category)"
+    routerLink="/products/category/{{ category.categoryId }}"
+    *ngFor="let category of categories"
+    [class]="getCurrentCategoryClass(category)"
+  >
+    {{ category.categoryName }}
+  </li>
+</ul>
+
+<div class="card-footer" *ngIf="userClaims.includes('admin')">
+  <button class="btn btn-fill btn-warning" routerLink="/products/add">
+    Ürün Ekleme
+  </button>
+</div>
